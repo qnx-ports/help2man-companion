@@ -1,7 +1,7 @@
 # This can only be compiled natively on QNX
 pkgname=help2man
 pkgver=1.49.3
-pkgrel=${pkgrel:-0}
+pkgrel=0
 pkgdesc="Create simple man pages from --help output"
 url="https://www.gnu.org/software/help2man"
 arch="all"
@@ -38,7 +38,6 @@ package() {
     make DESTDIR="$pkgdir/" install
 }
 
-options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 5f19fad1e38b0572b63ed8bfd146b717fc22dff3a26641e8b5c8431df13da9574679d9a3407da62790db8a29286694ea1bfd751cba168f475302ad31cce845cf  help2man-1.49.3.tar.xz
 "
